@@ -216,3 +216,7 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Trace: generated data (re-create with python -m tracekpg.fetch / python -m tracekpg.load)
+data/raw/
+data/*.db
