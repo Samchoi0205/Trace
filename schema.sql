@@ -36,3 +36,6 @@ CREATE TABLE IF NOT EXISTS facts (
     FOREIGN KEY (document_id) REFERENCES documents(id),
     FOREIGN KEY (subject_mention_id) REFERENCES mentions(id)
 );
+
+-- lets the database jump straight to one document's mentions instead of scanning every row.
+CREATE INDEX IF NOT EXISTS idx_mentions_doc ON mentions(document_id);
